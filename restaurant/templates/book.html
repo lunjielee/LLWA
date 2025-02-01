@@ -50,7 +50,7 @@
 <script>
 
   const date = new Date()
-  document.getElementById('reservation_date').value = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate().toString().padStart(2, "0")}`
+  document.getElementById('reservation_date').value = date.toISOString().split('T')[0]
 
   console.log(document.getElementById('reservation_date').value)
   getBookings()
